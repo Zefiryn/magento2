@@ -191,7 +191,8 @@ class Document extends \Magento\Framework\View\Element\UiComponent\DataProvider\
         $isConfirmationRequired = (bool)$this->scopeConfig->getValue(
             AccountManagement::XML_PATH_IS_CONFIRM,
             ScopeInterface::SCOPE_WEBSITES,
-            $websiteId);
+            $websiteId
+        );
 
         $valueText = __('Confirmation Not Required');
         if ($isConfirmationRequired) {
