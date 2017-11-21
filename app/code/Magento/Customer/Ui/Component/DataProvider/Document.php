@@ -178,16 +178,6 @@ class Document extends \Magento\Framework\View\Element\UiComponent\DataProvider\
     {
         $value = $this->getData(self::$confirmationAttributeCode);
         $websiteId = $this->getData(self::$websiteIdAttributeCode) ?: $this->getData(self::$websiteAttributeCode);
-<<<<<<< HEAD
-        $isConfirmRequired = (bool)$this->scopeConfig->getValue(
-            AccountManagement::XML_PATH_IS_CONFIRM,
-            ScopeInterface::SCOPE_WEBSITES,
-            $websiteId
-        );
-
-        $valueText = __('Confirmation Not Required');
-        if ($isConfirmRequired) {
-=======
         $isConfirmationRequired = (bool)$this->scopeConfig->getValue(
             AccountManagement::XML_PATH_IS_CONFIRM,
             ScopeInterface::SCOPE_WEBSITES,
@@ -196,7 +186,6 @@ class Document extends \Magento\Framework\View\Element\UiComponent\DataProvider\
 
         $valueText = __('Confirmation Not Required');
         if ($isConfirmationRequired) {
->>>>>>> 5f3ef1bc506... # This is a combination of 3 commits.
             $valueText = $value === null ? __('Confirmed') : __('Confirmation Required');
         }
 
